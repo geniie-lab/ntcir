@@ -1,0 +1,67 @@
+site_name: My Docs
+theme:
+  name: material
+  language: en
+  palette:
+    scheme: default
+    primary: black
+  features:
+    - navigation.instant
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  custom_dir: overrides
+  icon:
+    logo: simple/lighthouse
+plugins:
+  - search
+markdown_extensions:
+  - abbr
+  - def_list
+  - footnotes
+  - attr_list
+  - admonition
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.caret
+  - pymdownx.tilde
+  - pymdownx.critic
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - pymdownx.snippets
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+extra_css:
+  - stylesheets/extra.css
+extra:
+  social:
+    - icon: fontawesome/solid/house
+      link: https://joholab.slis.tsukuba.ac.jp/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/hideo_joho
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:hideo@slis.tsukuba.ac.jp
+copyright: Copyright &copy; 2025 Hideo Joho. All rights reserved.
+nav:
+  - Home: index.md
+  - About: about.md
