@@ -1,19 +1,17 @@
-site_name: My Docs
+site_name: NTCIR Agentic Instruction Task
 theme:
   name: material
   language: en
   palette:
     scheme: default
-    primary: black
+    primary: white
   features:
     - navigation.instant
     - navigation.indexes
     - navigation.top
     - search.suggest
     - search.highlight
-  custom_dir: overrides
-  icon:
-    logo: simple/lighthouse
+  logo: images/logo.png
 plugins:
   - search
 markdown_extensions:
@@ -56,12 +54,12 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/solid/house
-      link: https://joholab.slis.tsukuba.ac.jp/
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/hideo_joho
+      link: https://geniie-lab.github.com/ntcir/
+    - icon: fontawesome/brands/x-twitter
+      link: https://x.com/agenticinstruct/
     - icon: fontawesome/solid/paper-plane
-      link: mailto:hideo@slis.tsukuba.ac.jp
-copyright: Copyright &copy; 2025 Hideo Joho. All rights reserved.
+      link: mailto:agenticinstruction-org@googlegroups.com
+copyright: Copyright &copy; 2025 NTCIR Agentic Instruction Task Organiser. All rights reserved.
 nav:
   - Home: index.md
   - About: about.md

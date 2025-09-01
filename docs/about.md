@@ -1,3 +1,5 @@
 ﻿# About
 
-This is a starter kit for MkDocs with Material theme.
+!!! info ""
+    This is a web site for NTCIR Agentic Instruction Task.
+
