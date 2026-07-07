@@ -61,4 +61,7 @@ extra:
 copyright: Copyright &copy; 2025 NTCIR Agentic Instruction Task Organiser. All rights reserved.
 nav:
   - Home: index.md
+  - Getting Started: getting-started.md
+  - Task Description: task-description.md
+  - How to Submit: run-submission.md
   - About: about.md
