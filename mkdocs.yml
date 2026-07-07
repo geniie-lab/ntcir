@@ -56,9 +56,11 @@ extra:
       link: https://geniie-lab.github.com/ntcir/
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/agenticinstruct/
+    - icon: fontawesome/brands/discord
+      link: http://discord.gg/zvXkNKtEGa
     - icon: fontawesome/solid/paper-plane
       link: mailto:agenticinstruction-org@googlegroups.com
-copyright: Copyright &copy; 2025 NTCIR Agentic Instruction Task Organiser. All rights reserved.
+copyright: Copyright &copy; 2025-2026 NTCIR Agentic Instruction Task Organiser. All rights reserved.
 nav:
   - Home: index.md
   - Getting Started: getting-started.md

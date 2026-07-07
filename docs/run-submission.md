@@ -25,6 +25,8 @@
     |tsukuba48|English|SPLADAE|1|`tsukuba48-en-splade-1`|
     |tsukuba48|Japanese|BM25|1|`tsukuba48-ja-bm25-1`|
 
+    :bulb: It's okay to change the session names after the run files are generated.
+
 !!! abstract "Run File Name"
 
     `geniie-lab` save log files in `logs` folder: `.jsonl` and `.log`. Please change the name of `.jsonl` files to the following format.
@@ -35,7 +37,11 @@
 
 !!! sucess "Submission"
 
-    Send your jsonl files to `agenticinstruction-org at googlegroups dot com` before the submission deadline.
+    Send your jsonl files to `agenticinstruction-org at googlegroups dot com` by the submission deadline. Follow the instruction below.
+
+    - Subject: NTCIR-19 AgenticInstruction Task Submission
+    - Body: Make sure to include your group ID and summary of runs
+
 
 !!! question "Questions?"
 

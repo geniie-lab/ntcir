@@ -18,9 +18,10 @@
         - Participants are welcome to index the dataset with other models as additional analyses and report your findings in the participant paper.
 
 !!! tip "Three steps to successful participation"
-    1. [Getting Started with the datasets and tools](getting-started.md)
-    1. [Follow Task Description](task-description.md)
-    1. [Submit Runs](run-submission.md)
+    1. [Getting started with the registration, datasets, and tool](getting-started.md)
+    1. [Learn task description and develop your own instructions](task-description.md)
+    1. [Submit runs](run-submission.md)
+    1. Write a participant paper and publish at NTCIR-19 Conference (TBA)
 
 !!! success "Important Dates"
     :warning: Some schedule is differernt from NTCIR-19 official one.

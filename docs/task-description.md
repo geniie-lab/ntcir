@@ -1,7 +1,7 @@
 # Task Description for NTCIR-19
 
 !!! bug ""
-    Under Construction. Stay Tuned.
+    :construction: Under Construction. Stay Tuned.
 
 !!! warning "Important Rules"
 
