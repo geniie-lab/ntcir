@@ -18,7 +18,7 @@
     `[group-id]-[language]-[ir-model]-[run-id]`
 
     - `language`: `en` or `ja`
-    - `ir-model`: `bm25` or `splade`
+    - `ir-model`: `bm25` or `splade` (Sparse Encoder)
     - `run-id`: `1`, `2`, `3` (Your instruction method ID, up to 3)
 
     **Examples**
@@ -27,7 +27,7 @@
     |:--|:--|:--|:--|:--|
     |tsukuba48|English|BM25|1|`tsukuba48-en-bm25-1`|
     |tsukuba48|English|BM25|2|`tsukuba48-en-bm25-2`|
-    |tsukuba48|English|SPLADE|1|`tsukuba48-en-splade-1`|
+    |tsukuba48|English|Sparse Encoder|1|`tsukuba48-en-splade-1`|
     |tsukuba48|Japanese|BM25|1|`tsukuba48-ja-bm25-1`|
 
     :bulb: It's okay to change the session names after the run files are generated.

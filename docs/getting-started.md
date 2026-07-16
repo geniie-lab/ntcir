@@ -3,7 +3,7 @@
 1. [Register to NTCIR-19](https://research.nii.ac.jp/ntcir/ntcir-19/howto.html) and select `AgenticInstruction` as participating task
 1. Decide which language(s) to participate (English only, Japanese only, or both)
 1. Obtain a copy of datasets based on your language choice.
-    - We suggest to start with train/dev datasets first.
+    - We suggest starting with train/dev datasets first.
 
     |Language|Set|Dataset|
     |:--|:--|:--|
@@ -33,8 +33,9 @@
         OPENSEARCH_ADMIN_PASS="[Contact the organiser to obtain your password]"
         GROQ_API_KEY="[your groq api key]"
         ```
-    - Locate `scripts\run_session_experiment_ntcir19.py` and
-        - Run the script to conduct a pilot experiment.
+    - Download [run_session_experiment_ntcir19.py](run_session_experiment_ntcir19.py) to the `scripts` folder of `geniie-lab` repo and
+        - Run the script to conduct a pilot experiment
+            - Query, ranking, click, judge, reformulation, and ranking for a single topic
         - Check `logs` folder for outputs.
             - `.jsonl` is the search log file of experiments
             - `.log` is the error/warning log file for reference

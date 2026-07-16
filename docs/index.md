@@ -18,12 +18,11 @@
     - Only BM25 and Sparse Encoder will be used as official IR models in NTCIR-19.
         - Participants are welcome to index the dataset with other models in your additional analyses and report findings in the participant paper.
 
-!!! tip "Three steps to successful participation"
+!!! tip "Four steps to successful participation"
     1. [Getting started with the registration, datasets, and tool](getting-started.md)
     1. [Learn task description and develop your own instructions](task-description.md)
     1. [Submit runs](run-submission.md)
-
-    :point_right: Then write a participant paper and publish at NTCIR-19 Conference (TBA)
+    1. Write a participant paper and publish at NTCIR-19 Conference (TBA)
 
 !!! success "Important Dates"
     :warning: Some dates are different from the NTCIR-19 official schedule.
@@ -33,7 +32,7 @@
     |July 10th, 2026|Task registration due|Participant|
     |August 10th, 2026|Run submission due|Participant|
     |September 1st, 2026|Evaluation results release|Organiser|
-    ||Task overview paper (draft) release|Organiser|
+    |Same as above|Task overview paper (draft) release|Organiser|
     |October 1st, 2026|Participant paper (complete-ish draft) due|Participant|
     |October 15th, 2026|Review feedback on participant paper release|Organiser|
     |November 1st, 2026|Participant paper (camera-ready) due|Participant|

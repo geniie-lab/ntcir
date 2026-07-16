@@ -18,10 +18,18 @@
 
 ## Customisable parameters
 
-:bulb: You can change these parameters in your experiment.
+:bulb: This is your design space to explore.
+
+## Advanced instructions
+
+:bulb: Tips for hacking `geniie-lab` code base to achieve advanced method of generating instructions.
 
 
 ## FAQ
+
+??? question "Can I use a locally deployed gpt-oss-120b?"
+
+    Yes. `geniie-lab` supports ollama and vllm for local models. See `Model Description` of [Common settings](https://github.com/geniie-lab/geniie-lab/blob/dev/docs/experiments/common_settings.md)
 
 ??? question "How can I resume my experiment from a failed topic?"
 
