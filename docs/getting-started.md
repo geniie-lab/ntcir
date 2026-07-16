@@ -25,6 +25,15 @@
     - Participants are expected to purchase additional API credits to complete experiments.
 
 1. Clone the `dev` branch of [geniie-lab](https://github.com/geniie-lab/geniie-lab/tree/dev) repo
+    - Run the following commands to install
+        ```bash
+        git clone https://github.com/geniie-lab/geniie-lab.git -b dev
+        python -m venv venv
+        source venv/bin/activate
+        (venv) python -m pip install -U pip
+        (venv) python -m pip install -r requirements.txt
+        (venv) python -m pip install -e .
+        ```
     - Set the environmental variables in `.env` file at the root of the repo folder
     - :bulb: Note that each registered group has its own username/password
         ```bash
@@ -33,7 +42,7 @@
         OPENSEARCH_ADMIN_PASS="[Contact the organiser to obtain your password]"
         GROQ_API_KEY="[your groq api key]"
         ```
-    - Download [run_session_experiment_ntcir19.py](run_session_experiment_ntcir19.py) to the `scripts` folder of `geniie-lab` repo and
+    - Download [run_session_experiment_ntcir19.py](run_session_experiment_ntcir19.py) and save it to the `scripts` folder of `geniie-lab` repo and
         - Run the script to conduct a pilot experiment
             - Query, ranking, click, judge, reformulation, and ranking for a single topic
         - Check `logs` folder for outputs.
