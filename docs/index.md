@@ -12,19 +12,21 @@
 
 !!! warning "Notable changes from the kick-off event"
     - Use of docker image was cancelled due to technical/license issues
+        - Instead, [detailed instructions](getting-started.md) are available to set up the environment.
     - Only `gpt-oss-120b` will be used as an official LLM in NTCIR-19.
-        - Participants are welcome to test other LLMs as additional analyses and report your findings in the participant paper.
+        - Participants are welcome to test other LLMs in your additional analyses and report findings in the participant paper.
     - Only BM25 and Sparse Encoder will be used as official IR models in NTCIR-19.
-        - Participants are welcome to index the dataset with other models as additional analyses and report your findings in the participant paper.
+        - Participants are welcome to index the dataset with other models in your additional analyses and report findings in the participant paper.
 
 !!! tip "Three steps to successful participation"
     1. [Getting started with the registration, datasets, and tool](getting-started.md)
     1. [Learn task description and develop your own instructions](task-description.md)
     1. [Submit runs](run-submission.md)
-    1. Write a participant paper and publish at NTCIR-19 Conference (TBA)
+
+    :point_right: Then write a participant paper and publish at NTCIR-19 Conference (TBA)
 
 !!! success "Important Dates"
-    :warning: Some schedule is differernt from NTCIR-19 official one.
+    :warning: Some dates are different from the NTCIR-19 official schedule.
 
     |Date|Event/Task|Role|
     |:--|:--|:--:|

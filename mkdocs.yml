@@ -28,7 +28,9 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.details
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
   - pymdownx.betterem:
       smart_enable: all
   - pymdownx.highlight
@@ -53,7 +55,7 @@ extra_css:
 extra:
   social:
     - icon: fontawesome/solid/house
-      link: https://geniie-lab.github.com/ntcir/
+      link: https://geniie-lab.github.io/ntcir/
     - icon: fontawesome/brands/x-twitter
       link: https://x.com/agenticinstruct/
     - icon: fontawesome/brands/discord
