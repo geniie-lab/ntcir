@@ -1,4 +1,4 @@
-site_name: NTCIR Agentic Instruction Task
+site_name: NTCIR AgenticInstruction Task
 theme:
   name: material
   language: en
@@ -68,4 +68,5 @@ nav:
   - Getting Started: getting-started.md
   - Task Description: task-description.md
   - How to Submit: run-submission.md
+  - FAQ: faq.md
   - About: about.md

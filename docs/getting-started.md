@@ -1,6 +1,6 @@
 # How to get started with Agentic Instruction Task
 
-1. [Register to NTCIR-19](https://research.nii.ac.jp/ntcir/ntcir-19/howto.html) and select `AgenticInstruction` as participating task
+1. [Register to NTCIR-19](https://research.nii.ac.jp/ntcir/ntcir-19/howto.html) and select `AgenticInstruction` as a participating task
 1. Decide which language(s) to participate (English only, Japanese only, or both)
 1. Obtain a copy of datasets based on your language choice.
     - We suggest starting with train/dev datasets first.
@@ -12,7 +12,7 @@
     |Japanese|Train/Dev|[NTCIR-1 (IR and Term Extraction/Role Analysis Test Collections)](https://research.nii.ac.jp/ntcir/permission/perm-en.html#ntcir-1)|
     |Japanese|Test|[NTCIR-2 (IR Test Collection)](https://research.nii.ac.jp/ntcir/permission/perm-en.html#ntcir-2)<br/>:bulb: Obtain the test set only when you decide to submit a run.|
 
-1. Run preprocessing notebooks to access datasets using `ir_datasets`
+1. Run preprocessing notebooks to gain access to the datasets using `ir_datasets`
 
     |Language|Set|Notebook/Notes|
     |:--|:--|:--|
@@ -44,13 +44,16 @@
         ```
     - Download [run_session_experiment_ntcir19.py](run_session_experiment_ntcir19.py) and save it to the `scripts` folder of `geniie-lab` repo and
         - Run the script to conduct a pilot experiment
-            - Query, ranking, click, judge, reformulation, and ranking for a single topic
+            - Query, ranking, click, and judge for a single topic
+            ```bash
+            python scripts/run_session_experiment_ntcir19.py
+            ```
         - Check `logs` folder for outputs.
             - `.jsonl` is the search log file of experiments
             - `.log` is the error/warning log file for reference
-    - Read the [documentation](https://github.com/geniie-lab/geniie-lab/blob/dev/docs/index.md) as needed
+    - Read the [documentation](https://github.com/geniie-lab/geniie-lab/blob/dev/docs/index.md) of `geniie-lab` as needed
 
-1. You're ready to go. Move on to [Task Description](task-description.md)
+1. You're ready to go! Move on to [Task Description](task-description.md)
 
 !!! question "Questions?"
 

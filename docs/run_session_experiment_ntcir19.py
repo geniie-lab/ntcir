@@ -37,15 +37,38 @@ my_settings = ExperimentSettings(
         serp_size=10
     ),
     topicset=TopicDescription(
-        name="aquaint/trec-robust-2005",
+        name="disks45/nocr/trec-robust-2004/fold1",
+        # name="disks45/nocr/trec-robust-2004/fold2",
+        # name="aquaint/trec-robust-2005",
+        # name="ntcir1_adhoc",
+        # name="ntcir2_adhoc",
         type="ir_datasets",
         topic_class=FullTopic
     ),
     corpus=CorpusDescription(
-        name="Aquaint",
-        description="A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).",
-        index_name="aquaint_bm25",
+        name="Disk45",
+        description="A document collection of about 528,000 English news documents. Sources include the Financial Times (1991-1994), the Federal Register (1994), the Foreign Broadcast Information Service (1996), and the Los Angeles Times (1989-1990).",
+        index_name="trec_robust_2004_bm25",
+        # index_name="trec_robust_2004_splade",
     ),
+    # corpus=CorpusDescription(
+    #     name="Aquaint",
+    #     description="A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).",
+    #     index_name="trec_robust_2005_bm25",
+    #     # index_name="trec_robust_2005_splade",
+    # ),
+    # corpus=CorpusDescription(
+    #     name="NTCIR1",
+    #     description="A collection of about 340,000 Japanese academic documents. Sources include author abstracts of academic conference papers hosted by 65 Japanese academic societies (1988-1997).",
+    #     index_name="ntcir1_bm25",
+    #     # index_name="ntcir1_splade",
+    # ),
+    # corpus=CorpusDescription(
+    #     name="NTCIR2",
+    #     description="A collection of about 736,000 Japanese academic documents. Sources include author abstracts of academic conference papers hosted by Japanese academic societies (1997-1999) and extended summaries of grant reports (1986-1997).",
+    #     index_name="ntcir2_bm25",
+    #     # index_name="ntcir2_splade",
+    # ),
     models=[
         ModelDescription(
             type="groq",
@@ -104,9 +127,12 @@ my_settings = ExperimentSettings(
     # plan=["query"],
     # plan=["query", "ranking"],
     # plan=["query", "ranking", "click"],
-    # plan=["query", "ranking", "click", "relevance"],
-    plan=["query", "ranking", "click", "relevance", "reformulate", "ranking"],
-    
+    plan=["query", "ranking", "click", "relevance"],
+    # plan=["query", "ranking", "click", "relevance"] + ["reformulate", "ranking", "click", "relevance"],
+    # plan=["query", "ranking", "click", "relevance"] + ["reformulate", "ranking", "click", "relevance"] * 2,
+    # plan=["query", "ranking", "click", "relevance"] + ["reformulate", "ranking", "click", "relevance"] * 3,
+    # plan=["query", "ranking", "click", "relevance"] + ["reformulate", "ranking", "click", "relevance"] * 4,
+
     topic_ids="1:1",
     full_log=False
 )

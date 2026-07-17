@@ -1,8 +1,7 @@
 ﻿# About
 
-!!! info ""
-    This is a web site for NTCIR Agentic Instruction Task.
-
+!!! info "About"
+    This is a web site for NTCIR AgenticInstruction Task.
 
 !!! quote "Task Organiser"
     Hideo Joho (University of Tsukuba)
