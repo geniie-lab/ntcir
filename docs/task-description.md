@@ -1,8 +1,5 @@
 # Task Description for NTCIR-19
 
-!!! bug ""
-    :construction: Under Construction. Stay Tuned.
-
 !!! warning "Important Rules"
 
     - All development, training, and testing must be done on `train/dev` datasets
@@ -11,11 +8,7 @@
     - You must generate log files using `test` datasets for [run submission](run-submission.md)
     - You cannot edit the generated log files except session names
 
-## Customisable parameters
-
-:bulb: This is your design space to explore. Making changes to any of these parameters could potentially change the output of a LLM-based search agent.
-
-## Index names
+## Index name
 
 - You need to select an index name that matches your selection of dataset and IR model.
 
@@ -23,23 +16,27 @@
 
     |Index name|Dataset|IR Model|
     |:--|:--|:--|
-    |robust_2004_bm25|Robust 2004|BM25|
-    |robust_2004_splade|Robust 2004|Sparse Encoder|
-    |robust_2005_bm25|Robust 2005|BM25|
-    |robust_2005_splade|Robust 2005|Sparse Encoder|
+    |`terc_robust_2004_bm25`|TREC Robust 2004|BM25|
+    |`terc_robust_2004_splade`|TREC Robust 2004|Sparse Encoder|
+    |`terc_robust_2005_bm25`|TREC Robust 2005|BM25|
+    |`terc_robust_2005_splade`|TREC Robust 2005|Sparse Encoder|
 
 === "Japanese"
 
     |Index name|Dataset|IR Model|
     |:--|:--|:--|
-    |ntcir1_adhoc_bm25|NTCIR-1 AdHoc|BM25|
-    |ntcir1_adhoc_splade|NTCIR-1 AdHoc|Sparse Encoder|
-    |ntcir2_adhoc_bm25|NTCIR-2 AdHoc|BM25|
-    |ntcir2_adhoc_splade|NTCIR-2 AdHoc|Sparse Encoder|
+    |`ntcir1_bm25`|NTCIR-1 AdHoc|BM25|
+    |`ntcir1_splade`|NTCIR-1 AdHoc|Sparse Encoder|
+    |`ntcir2_bm25`|NTCIR-2 AdHoc|BM25|
+    |`ntcir2_splade`|NTCIR-2 AdHoc|Sparse Encoder|
+
+## Customisable parameters
+
+:bulb: This is your design space to explore. Making changes to any of these parameters could potentially change the output of a LLM-based search agent.
 
 ## Fixed parameters
 
-:bulb: Don't change these parameters in your experiment.
+:bulb: Don't change these parameters for your [submitted runs](run-submission.md).
 
 === "Task Description"
 
@@ -58,8 +55,8 @@
     ```python
     # Robust 2004 (Train/Dev)
     corpus=CorpusDescription(
-        name="Aquaint",
-        description="A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).",
+        name="Disk45",
+        description="A document collection of about 528,000 English news documents. Sources include the Financial Times (1991-1994), the Federal Register (1994), the Foreign Broadcast Information Service (1996), and the Los Angeles Times (1989-1990).",
         index_name="[index name]",
     )
     # Robust 2005 (Test)
@@ -70,14 +67,14 @@
     )
     # NTCIR-1 AdHoc (Train/Dev)
     corpus=CorpusDescription(
-        name="Aquaint",
-        description="A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).",
+        name="NTCIR1",
+        description="A collection of about 340,000 Japanese academic documents. Souces include author abstracts of academic conference papers hosted by 65 Japanese academic societies (1988-1997).",
         index_name="[index name]",
     )
-    # NTCIR-3 AdHoc (Test)
+    # NTCIR-2 AdHoc (Test)
     corpus=CorpusDescription(
-        name="Aquaint",
-        description="A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).",
+        name="NTCIR2",
+        description="A collection of about 736,000 Japanese academic documents. Sources include author abstracts of academic conference papers hosted by Japanese academic societies (1997-1999) and extended summaries of grant reports (1986-1997).",
         index_name="[index name]",
     )
     ```
@@ -106,10 +103,11 @@
         ToolDescription(
             name="opensearch",
             ranking_model="splade",
+            encode_model="opensearch-project/opensearch-neural-sparse-encoding-multilingual-v1",
             index_name="[index name]",
             host=os.getenv("OPENSEARCH_HOST"),
             port=9200,
-            description="It allows you to perform searches using keywords only and employs a sparse encoder ranking model to order results.",
+            description="It allows you to perform searches using keywords only and employs a sparse encoder model to order results.",
         )
     ]
     ```
@@ -127,8 +125,8 @@
     )
     ...
     corpus=CorpusDescription(
-        name="Aquaint",
-        description="A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).",
+        name="Disk45",
+        description="A document collection of about 528,000 English news documents. Sources include the Financial Times (1991-1994), the Federal Register (1994), the Foreign Broadcast Information Service (1996), and the Los Angeles Times (1989-1990).",
         index_name="[index name]",
     )
     ```
@@ -159,8 +157,8 @@
     )
     ...
     corpus=CorpusDescription(
-        name="Aquaint",
-        description="A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).",
+        name="NTCIR1",
+        description="A collection of about 340,000 Japanese academic documents. Souces include author abstracts of academic conference papers hosted by 65 Japanese academic societies (1988-1997).",
         index_name="[index name]",
     )
     ```
@@ -176,8 +174,8 @@
     )
     ...
     corpus=CorpusDescription(
-        name="Aquaint",
-        description="A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).",
+        name="NTCIR2",
+        description="A collection of about 736,000 Japanese academic documents. Sources include author abstracts of academic conference papers hosted by Japanese academic societies (1997-1999) and extended summaries of grant reports (1986-1997).",
         index_name="[index name]",
     )
     ```

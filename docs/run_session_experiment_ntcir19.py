@@ -60,7 +60,7 @@ my_settings = ExperimentSettings(
         ToolDescription(
             name="opensearch",
             ranking_model="bm25",
-            index_name="aquaint_bm25",
+            index_name="[index_name]",
             host=os.getenv("OPENSEARCH_HOST"),
             port=9200,
             description="It allows you to perform searches using keywords only and employs the BM25 ranking model to order results.",
@@ -68,11 +68,11 @@ my_settings = ExperimentSettings(
         # ToolDescription(
         #     name="opensearch",
         #     ranking_model="splade",
-        #     encode_model="naver/splade-cocondenser-ensembledistil",
-        #     index_name="aquaint_splade",
-        #     host="localhost",
+        #     encode_model="opensearch-project/opensearch-neural-sparse-encoding-multilingual-v1",
+        #     index_name="[index_name]",
+        #     host=os.getenv("OPENSEARCH_HOST"),
         #     port=9200,
-        #     description="It allows you to perform searches using keywords only and employs the SPLADE ranking model to order results.",
+        #     description="It allows you to perform searches using keywords only and employs a sparse encoder model to order results.",
         # ),
     ],
     stages={
