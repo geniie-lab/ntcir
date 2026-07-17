@@ -1,0 +1,1025 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../run-submission/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Task Description - NTCIR AgenticInstruction Task</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#task-description-for-ntcir-19" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="NTCIR AgenticInstruction Task" class="md-header__button md-logo" aria-label="NTCIR AgenticInstruction Task" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            NTCIR AgenticInstruction Task
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Task Description
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="NTCIR AgenticInstruction Task" class="md-nav__button md-logo" aria-label="NTCIR AgenticInstruction Task" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    NTCIR AgenticInstruction Task
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting Started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Task Description
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Task Description
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customisable-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customisable parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-change-ir-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to change IR model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-change-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to change datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-measure-the-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to measure the performance
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../run-submission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to Submit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#customisable-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Customisable parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fixed-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fixed parameters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-change-ir-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to change IR model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-change-datasets" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to change datasets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-instructions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced instructions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-measure-the-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to measure the performance
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="task-description-for-ntcir-19">Task Description for <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19</h1>
+<div class="admonition warning">
+<p class="admonition-title">Important Rules</p>
+<ul>
+<li>All development, training, and testing must be done on <code>train/dev</code> datasets</li>
+<li>You cannot change/train/test your instruction method using <code>test</code> datasets</li>
+<li>You cannot use <abbr title="Query relevance judgments">qrels</abbr> data of <code>test</code> datasets</li>
+<li>You must submit jsonl log files generated by <code>test</code> datasets</li>
+<li>You cannot edit the generated log files except session names</li>
+</ul>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Goal of AgenticInstruction Task at <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19</p>
+<ul>
+<li>Goal of AgenticInstruction Task at <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19 is to develop instruction methods for an <abbr title="Large Language Model">LLM</abbr> to <mark>maximise a total number of unique relevant documents identified</mark> within five iterations of search sequences, <mark>while minimising a total number of tokens</mark> sent to and produced by the <abbr title="Large Language Model">LLM</abbr>.</li>
+<li>A search sequence includes a query, ranking, click, and relevance judgement</li>
+<li>A relevant document in this task is<ul>
+<li>a document clicked (selected) from a SERP by the <abbr title="Large Language Model">LLM</abbr>; and</li>
+<li>a document judged as relevant by the <abbr title="Large Language Model">LLM</abbr>; and</li>
+<li>a document labeled as relevant by official <abbr title="Query relevance judgments">qrels</abbr></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition example">
+<p class="admonition-title">How to change the size of iterations</p>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Iteration is defined by <code>plan</code> parameter.
+<img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Start with a small plan.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Iteration x 1</label><label for="__tabbed_1_2">Iteration x 2</label><label for="__tabbed_1_3">Iteration x 3 to 5</label><label for="__tabbed_1_4">For debugging or testing</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">plan</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">plan</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;reformulate&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># 3 iterations</span>
+<span class="n">plan</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;reformulate&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2</span>
+<span class="c1"># 4 iterations</span>
+<span class="n">plan</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;reformulate&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">3</span>
+<span class="c1"># 5 iterations (Target)</span>
+<span class="n">plan</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;reformulate&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">,</span> <span class="s2">&quot;relevance&quot;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">4</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">plan</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">]</span>                        <span class="c1"># Initial query formulation</span>
+<span class="n">plan</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">]</span>             <span class="c1">#   plus ranking</span>
+<span class="n">plan</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;query&quot;</span><span class="p">,</span> <span class="s2">&quot;ranking&quot;</span><span class="p">,</span> <span class="s2">&quot;click&quot;</span><span class="p">]</span>    <span class="c1">#   plus clicking</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Index name</p>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Look up the tables below to find an index name that matches your selection of dataset and <abbr title="Information Retrieval">IR</abbr> model.
+You will need to use the index name in multiple places in the experimental settings of <code>geniie-lab</code>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">English</label><label for="__tabbed_2_2">Japanese</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Index name</th>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: left;"><abbr title="Information Retrieval">IR</abbr> Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>trec_robust_2004_bm25</code></td>
+<td style="text-align: left;"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>trec_robust_2004_splade</code></td>
+<td style="text-align: left;"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004</td>
+<td style="text-align: left;">Sparse Encoder</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>trec_robust_2005_bm25</code></td>
+<td style="text-align: left;"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2005</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>trec_robust_2005_splade</code></td>
+<td style="text-align: left;"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2005</td>
+<td style="text-align: left;">Sparse Encoder</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Index name</th>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: left;"><abbr title="Information Retrieval">IR</abbr> Model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>ntcir1_bm25</code></td>
+<td style="text-align: left;"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-1 AdHoc</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ntcir1_splade</code></td>
+<td style="text-align: left;"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-1 AdHoc</td>
+<td style="text-align: left;">Sparse Encoder</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ntcir2_bm25</code></td>
+<td style="text-align: left;"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-2 AdHoc</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>ntcir2_splade</code></td>
+<td style="text-align: left;"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-2 AdHoc</td>
+<td style="text-align: left;">Sparse Encoder</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<h2 id="customisable-parameters">Customisable parameters</h2>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> This is your design space to explore. Making changes to any of these parameters could potentially change the output of a <abbr title="Large Language Model">LLM</abbr>-based search agent. Edit the experimental settings in <a href="../run_session_experiment_ntcir19.py">run_session_experiment_ntcir19.py</a></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:4"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><input id="__tabbed_3_3" name="__tabbed_3" type="radio" /><input id="__tabbed_3_4" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">System prompt</label><label for="__tabbed_3_2">Topic fields</label><label for="__tabbed_3_3">Tool description</label><label for="__tabbed_3_4">Instruction for query, click, judge, and reformulation</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">models</span><span class="o">=</span><span class="p">[</span>
+    <span class="n">ModelDescription</span><span class="p">(</span>
+        <span class="o">...</span>
+        <span class="n">system_prompt</span><span class="o">=</span><span class="s2">&quot;You&#39;re a helpful assistant&quot;</span><span class="p">,</span>
+        <span class="o">...</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">topicset</span><span class="o">=</span><span class="n">TopicDescription</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="n">topic_class</span><span class="o">=</span><span class="n">FullTopic</span> <span class="c1"># TitleOnlyTopic, TitleDescriptionTopic, TitleNarrativeTopic</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">ToolDescription</span><span class="p">(</span>
+    <span class="o">...</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;It allows you to perform searches using keywords only and employs the BM25 ranking model to order results.&quot;</span><span class="p">,</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">stages</span><span class="o">=</span><span class="p">{</span>
+    <span class="s2">&quot;query&quot;</span><span class="p">:</span> <span class="n">StageConfig</span><span class="p">(</span>
+        <span class="n">instruction</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            Review the provided descriptions of task, corpus, tool and search topic. Then, formulate a search query.</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;ranking&quot;</span><span class="p">:</span> <span class="n">StageConfig</span><span class="p">(</span>
+        <span class="n">instruction</span><span class="o">=</span><span class="s2">&quot;&quot;</span> <span class="c1"># This is not used.</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;click&quot;</span><span class="p">:</span> <span class="n">StageConfig</span><span class="p">(</span>
+        <span class="n">instruction</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            Select a set of documents that are likely to contain relevant information to the search topic. Return an empty list if none of the results appears relevant.</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;relevance&quot;</span><span class="p">:</span> <span class="n">StageConfig</span><span class="p">(</span>
+        <span class="n">instruction</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            Evaluate the relevance of the document based on the search topic description and its narrative.</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">),</span>
+    <span class="s2">&quot;reformulate&quot;</span><span class="p">:</span> <span class="n">StageConfig</span><span class="p">(</span>
+        <span class="n">instruction</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">            Formulate another search query to find new relevant documents.</span>
+<span class="s2">        &quot;&quot;&quot;</span><span class="p">,</span>
+    <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="fixed-parameters">Fixed parameters</h2>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Don't change these parameters for your <a href="../run-submission/">submitted runs</a>. Parameters masked by <code>...</code> means you can modify them.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Task Description</label><label for="__tabbed_4_2">Corpus Description</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">task</span><span class="o">=</span><span class="n">TaskDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;High-Recall Retrieval&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;Find as many different relevant documents as possible for a given search topic from a given document collection using a provided search tool.&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Robust 2004 (Train/Dev)</span>
+<span class="n">corpus</span><span class="o">=</span><span class="n">CorpusDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Disk45&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A document collection of about 528,000 English news documents. Sources include the Financial Times (1991-1994), the Federal Register (1994), the Foreign Broadcast Information Service (1996), and the Los Angeles Times (1989-1990).&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+<span class="c1"># Robust 2005 (Test)</span>
+<span class="n">corpus</span><span class="o">=</span><span class="n">CorpusDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Aquaint&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+<span class="c1"># NTCIR-1 AdHoc (Train/Dev)</span>
+<span class="n">corpus</span><span class="o">=</span><span class="n">CorpusDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;NTCIR1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A collection of about 340,000 Japanese academic documents. Sources include author abstracts of academic conference papers hosted by 65 Japanese academic societies (1988-1997).&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+<span class="c1"># NTCIR-2 AdHoc (Test)</span>
+<span class="n">corpus</span><span class="o">=</span><span class="n">CorpusDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;NTCIR2&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A collection of about 736,000 Japanese academic documents. Sources include author abstracts of academic conference papers hosted by Japanese academic societies (1997-1999) and extended summaries of grant reports (1986-1997).&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="how-to-change-ir-model">How to change <abbr title="Information Retrieval">IR</abbr> model</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></label><label for="__tabbed_5_2">Sparse Encoder</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">tools</span><span class="o">=</span><span class="p">[</span>
+    <span class="n">ToolDescription</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;opensearch&quot;</span><span class="p">,</span>
+        <span class="n">ranking_model</span><span class="o">=</span><span class="s2">&quot;bm25&quot;</span><span class="p">,</span>
+        <span class="n">index_name</span><span class="o">=</span><span class="s2">&quot;[index name]&quot;</span><span class="p">,</span>
+        <span class="n">host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OPENSEARCH_HOST&quot;</span><span class="p">),</span>
+        <span class="n">port</span><span class="o">=</span><span class="mi">9200</span><span class="p">,</span>
+        <span class="o">...</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">tools</span><span class="o">=</span><span class="p">[</span>
+    <span class="n">ToolDescription</span><span class="p">(</span>
+        <span class="n">name</span><span class="o">=</span><span class="s2">&quot;opensearch&quot;</span><span class="p">,</span>
+        <span class="n">ranking_model</span><span class="o">=</span><span class="s2">&quot;splade&quot;</span><span class="p">,</span>
+        <span class="n">encode_model</span><span class="o">=</span><span class="s2">&quot;opensearch-project/opensearch-neural-sparse-encoding-multilingual-v1&quot;</span><span class="p">,</span>
+        <span class="n">index_name</span><span class="o">=</span><span class="s2">&quot;[index name]&quot;</span><span class="p">,</span>
+        <span class="n">host</span><span class="o">=</span><span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;OPENSEARCH_HOST&quot;</span><span class="p">),</span>
+        <span class="n">port</span><span class="o">=</span><span class="mi">9200</span><span class="p">,</span>
+        <span class="o">...</span>
+    <span class="p">)</span>
+<span class="p">]</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="how-to-change-datasets">How to change datasets</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:4"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><input id="__tabbed_6_3" name="__tabbed_6" type="radio" /><input id="__tabbed_6_4" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004 (Fold 1/2)</label><label for="__tabbed_6_2"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2005</label><label for="__tabbed_6_3"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-1 AdHoc</label><label for="__tabbed_6_4"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-2 AdHoc</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">topicset</span><span class="o">=</span><span class="n">TopicDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;disks45/nocr/trec-robust-2004/fold1&quot;</span><span class="p">,</span>
+    <span class="c1"># name=&quot;disks45/nocr/trec-robust-2004/fold2&quot;,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ir_datasets&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+<span class="o">...</span>
+<span class="n">corpus</span><span class="o">=</span><span class="n">CorpusDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Disk45&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A document collection of about 528,000 English news documents. Sources include the Financial Times (1991-1994), the Federal Register (1994), the Foreign Broadcast Information Service (1996), and the Los Angeles Times (1989-1990).&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">topicset</span><span class="o">=</span><span class="n">TopicDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;aquaint/trec-robust-2005&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ir_datasets&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+<span class="o">...</span>
+<span class="n">corpus</span><span class="o">=</span><span class="n">CorpusDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Aquaint&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A document collection of about 1M English newswire text. Sources include the Xinhua News Service (1996-2000), the New York Times News Service (1998-2000), and the Associated Press Worldstream News Service (1998-2000).&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">topicset</span><span class="o">=</span><span class="n">TopicDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ntcir1_adhoc&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ir_datasets&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+<span class="o">...</span>
+<span class="n">corpus</span><span class="o">=</span><span class="n">CorpusDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;NTCIR1&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A collection of about 340,000 Japanese academic documents. Sources include author abstracts of academic conference papers hosted by 65 Japanese academic societies (1988-1997).&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="n">topicset</span><span class="o">=</span><span class="n">TopicDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;ntcir2_adhoc&quot;</span><span class="p">,</span>
+    <span class="nb">type</span><span class="o">=</span><span class="s2">&quot;ir_datasets&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+<span class="o">...</span>
+<span class="n">corpus</span><span class="o">=</span><span class="n">CorpusDescription</span><span class="p">(</span>
+    <span class="n">name</span><span class="o">=</span><span class="s2">&quot;NTCIR2&quot;</span><span class="p">,</span>
+    <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A collection of about 736,000 Japanese academic documents. Sources include author abstracts of academic conference papers hosted by Japanese academic societies (1997-1999) and extended summaries of grant reports (1986-1997).&quot;</span><span class="p">,</span>
+    <span class="o">...</span>
+<span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="advanced-instructions">Advanced instructions</h2>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Tips for hacking <code>geniie-lab</code> code base to achieve advanced method of generating instructions.</p>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> You might need to re-run <code>python -m pip install -e .</code> to activate the change.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Instruction template</label><label for="__tabbed_7_2">Description of structured output</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>See <code>https://github.com/geniie-lab/geniie-lab/blob/dev/geniie_lab/dataclasses/instruction.py</code></li>
+<li>Example of template for query formulation</li>
+</ul>
+<div class="highlight"><pre><span></span><code>    <span class="n">instruction</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">        **Instruction**:</span>
+<span class="s2">        </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">instruction</span><span class="si">}</span>
+<span class="s2">        ============================</span>
+<span class="s2">        **Task Description**: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">task</span><span class="o">.</span><span class="n">description</span><span class="si">}</span>
+<span class="s2">        **Corpus Description**: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">description</span><span class="si">}</span>
+<span class="s2">        **Search Tool Description**: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">tool</span><span class="o">.</span><span class="n">description</span><span class="si">}</span>
+<span class="s2">        **Topic Description**: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">topic</span><span class="si">}</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>See <code>https://github.com/geniie-lab/geniie-lab/blob/dev/geniie_lab/response.py</code></li>
+<li>Example of descriptions in Query output</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">Query</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;A model for submitting a query to a search tool.&quot;&quot;&quot;</span>
+    <span class="n">query</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="o">...</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;query&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;The query string submitted to the search tool.&quot;</span>
+    <span class="p">)</span>
+    <span class="n">start</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="mi">0</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;start&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="p">(</span>
+            <span class="s2">&quot;The starting index of the search results. Defaults to 0. &quot;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="mi">10</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;size&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="p">(</span>
+            <span class="s2">&quot;The number of documents per search result page. Defaults to 10. &quot;</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+    <span class="n">reason</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">Field</span><span class="p">(</span>
+        <span class="o">...</span><span class="p">,</span>
+        <span class="n">title</span><span class="o">=</span><span class="s2">&quot;reason&quot;</span><span class="p">,</span>
+        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;A brief explanation of the intent behind your query.&quot;</span>
+    <span class="p">)</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="how-to-measure-the-performance">How to measure the performance</h2>
+<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6a7.svg" title=":construction:" /> To be added soon!</p>
+<div class="admonition question">
+<p class="admonition-title">Need help?</p>
+<p>Contact us via <a href="http://discord.gg/zvXkNKtEGa">Discord server</a> or email <code>agenticinstruction-org at googlegroups dot com</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025-2026 NTCIR Agentic Instruction Task Organiser. All rights reserved.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://geniie-lab.github.io/ntcir/" target="_blank" rel="noopener" title="geniie-lab.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M277.8 8.6c-12.3-11.4-31.3-11.4-43.5 0l-224 208c-9.6 9-12.8 22.9-8 35.1S18.8 272 32 272h16v176c0 35.3 28.7 64 64 64h288c35.3 0 64-28.7 64-64V272h16c13.2 0 25-8.1 29.8-20.3s1.6-26.2-8-35.1zM240 320h32c26.5 0 48 21.5 48 48v96H192v-96c0-26.5 21.5-48 48-48"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://x.com/agenticinstruct/" target="_blank" rel="noopener" title="x.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="http://discord.gg/zvXkNKtEGa" target="_blank" rel="noopener" title="discord.gg" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:agenticinstruction-org@googlegroups.com" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M536.4-26.3c9.8-3.5 20.6-1 28 6.3s9.8 18.2 6.3 28l-178 496.9c-5 13.9-18.1 23.1-32.8 23.1-14.2 0-27-8.6-32.3-21.7l-64.2-158c-4.5-11-2.5-23.6 5.2-32.6l94.5-112.4c5.1-6.1 4.7-15-.9-20.6s-14.6-6-20.6-.9l-112.4 94.3c-9.1 7.6-21.6 9.6-32.6 5.2L38.1 216.8c-13.1-5.3-21.7-18.1-21.7-32.3 0-14.7 9.2-27.8 23.1-32.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../task-description/">
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+        <link rel="next" href="../faq/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
     
     
       
-        <title>NTCIR AgenticInstruction Task</title>
+        <title>How to Submit - NTCIR AgenticInstruction Task</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.84d31ad4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -67,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#how-to-submit-runs" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -79,9 +88,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="NTCIR AgenticInstruction Task" class="md-header__button md-logo" aria-label="NTCIR AgenticInstruction Task" data-md-component="logo">
+    <a href=".." title="NTCIR AgenticInstruction Task" class="md-header__button md-logo" aria-label="NTCIR AgenticInstruction Task" data-md-component="logo">
       
-  <img src="/images/logo.png" alt="logo">
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -98,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              How to Submit
             
           </span>
         </div>
@@ -178,9 +187,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="NTCIR AgenticInstruction Task" class="md-nav__button md-logo" aria-label="NTCIR AgenticInstruction Task" data-md-component="logo">
+    <a href=".." title="NTCIR AgenticInstruction Task" class="md-nav__button md-logo" aria-label="NTCIR AgenticInstruction Task" data-md-component="logo">
       
-  <img src="/images/logo.png" alt="logo">
+  <img src="../images/logo.png" alt="logo">
 
     </a>
     NTCIR AgenticInstruction Task
@@ -195,7 +204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -217,7 +226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -239,7 +248,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/task-description/" class="md-nav__link">
+      <a href="../task-description/" class="md-nav__link">
         
   
   
@@ -258,10 +267,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/run-submission/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -272,6 +290,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -283,7 +302,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/faq/" class="md-nav__link">
+      <a href="../faq/" class="md-nav__link">
         
   
   
@@ -305,7 +324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/about/" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         
   
   
@@ -337,6 +356,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -348,8 +369,110 @@
             <div class="md-content" data-md-component="content">
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="how-to-submit-runs">How to submit runs</h1>
+<div class="admonition info">
+<p class="admonition-title">What is a run?</p>
+<p>A run at AgenticInstruction Task consists of jsonl outputs generated by <code>geniie-lab</code> using your instruction method. If you developed two instruction methods, you will have two <code>run-id</code>.  Submitted runs will be included in the task overview paper.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How many session files do we need to include per run?</p>
+<p>Participants are expected to include at least two session files per run. One using <abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr>, and another using Sparse Encoder (denoted as <code>splade</code>) for your choice of language (English or Japanese).</p>
+<p>If your method is applied to both English and Japanese, then four session files should be included per run (English + <abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr>, English + Sparse, Japanese + <abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr>, Japanese + Sparse).</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">How many runs can we submit?</p>
+<p>We plan to accept up to THREE runs per group for <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19.</p>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> You can perform additional experiments with more methods and report findings in your participant paper.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Session Name</p>
+<p>See <a href="https://github.com/geniie-lab/geniie-lab/blob/dev/docs/experiments/common_settings.md">Common settings</a> to learn how to set a session name in your experiments.</p>
+<p><strong>Format</strong></p>
+<p><code>[group-id]-[language]-[ir-model]-[run-id]</code></p>
+<ul>
+<li><code>language</code>: <code>en</code> or <code>ja</code></li>
+<li><code>ir-model</code>: <code>bm25</code> or <code>splade</code> (Sparse Encoder)</li>
+<li><code>run-id</code>: <code>1</code>, <code>2</code>, <code>3</code> (Your instruction method ID, up to 3)</li>
+</ul>
+<p><strong>Examples</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Group ID</th>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;"><abbr title="Information Retrieval">IR</abbr> Model</th>
+<th style="text-align: left;">Run ID</th>
+<th style="text-align: left;">Session Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">tsukuba48</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>tsukuba48-en-bm25-1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">tsukuba48</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;"><code>tsukuba48-en-bm25-2</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">tsukuba48</td>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;">Sparse Encoder</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>tsukuba48-en-splade-1</code></td>
+</tr>
+<tr>
+<td style="text-align: left;">tsukuba48</td>
+<td style="text-align: left;">Japanese</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;"><code>tsukuba48-ja-bm25-1</code></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> It's okay to change the session names after the run files are generated.</p>
+</div>
+<div class="admonition abstract">
+<p class="admonition-title">Run File Name</p>
+<p><code>geniie-lab</code> saves log files in the <code>logs</code> folder: <code>.jsonl</code> and <code>.log</code>. Please rename each <code>.jsonl</code> file to its session name plus the <code>.jsonl</code> extension.</p>
+<p><strong>Example</strong></p>
+<p>A session named <code>tsukuba48-en-bm25-1</code> is submitted as <code>tsukuba48-en-bm25-1.jsonl</code>.</p>
+</div>
+<div class="admonition success">
+<p class="admonition-title">Submission</p>
+<p>Send your jsonl files to <code>agenticinstruction-org at googlegroups dot com</code> by the submission deadline. Follow the instruction below.</p>
+<ul>
+<li>Subject: <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19 AgenticInstruction Task Submission</li>
+<li>Body: Make sure to include your group ID and brief summary description of each of your runs</li>
+</ul>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Questions?</p>
+<p>Contact us via <a href="http://discord.gg/zvXkNKtEGa">Discord server</a> or email <code>agenticinstruction-org at googlegroups dot com</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -441,12 +564,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "/", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "/assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="/javascripts/config.js"></script>
+        <script src="../javascripts/config.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
