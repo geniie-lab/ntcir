@@ -144,12 +144,15 @@ def report_topic_statistics(jsonl_path):
     """Print per-topic statistics from a session log file:
     - unique relevant documents: clicked by the LLM, judged relevant by the
       LLM, and labeled relevant in the official qrels (see Task Description)
-    - total tokens sent to and produced by the LLM across all stages
     - recall: unique relevant documents found / all relevant documents in the
       official qrels for the topic
+    - total tokens sent to and produced by the LLM across all stages
     - total time in seconds, from the first to the last record of the topic
       (the first stage's LLM call happens before the first record is written,
       so its latency is not included)
+    - per-iteration progression of the cumulative unique relevant documents
+      (an iteration starts at each query/reformulation stage), plus an
+      aggregate progression table to show where improvements level off
     """
     topics = {}
     dataset_names = set()
@@ -159,14 +162,19 @@ def report_topic_statistics(jsonl_path):
             dataset_names.add(record["dataset"])
             stats = topics.setdefault(
                 record["topic_id"],
-                {"relevant_docids": set(), "total_tokens": 0, "timestamps": []}
+                {"iterations": [], "total_tokens": 0, "timestamps": []}
             )
-            stats["total_tokens"] += record.get("total_token") or 0
+            if record.get("stage") in ("query", "reformulation") or not stats["iterations"]:
+                stats["iterations"].append({"relevant_docids": set(), "tokens": 0})
+            iteration = stats["iterations"][-1]
+            tokens = record.get("total_token") or 0
+            stats["total_tokens"] += tokens
+            iteration["tokens"] += tokens
             stats["timestamps"].append(datetime.fromisoformat(record["created_at"]))
             if (record.get("stage") == "rel_judge"
                     and record.get("label") == "Relevance.RELEVANT"
                     and record.get("qrel_label", 0) >= 1):
-                stats["relevant_docids"].add(record["docid"])
+                iteration["relevant_docids"].add(record["docid"])
 
     # Total relevant documents per topic from the official qrels
     total_relevant = {}
@@ -178,15 +186,41 @@ def report_topic_statistics(jsonl_path):
             if row.query_id in topics and row.relevance >= 1:
                 total_relevant[row.query_id] = total_relevant.get(row.query_id, 0) + 1
 
+    # Per-topic summary with the cumulative progression of unique rel docs
     print(f"\n{'Topic':<10}{'Unique rel docs':>17}{'Recall':>10}"
-          f"{'Total tokens':>15}{'Total time (s)':>17}")
+          f"{'Total tokens':>15}{'Total time (s)':>17}  Progression")
     for topic_id, stats in topics.items():
-        found = len(stats["relevant_docids"])
+        seen, cumulative = set(), []
+        for iteration in stats["iterations"]:
+            seen |= iteration["relevant_docids"]
+            cumulative.append(len(seen))
         available = total_relevant.get(topic_id, 0)
-        recall = found / available if available else 0.0
+        recall = len(seen) / available if available else 0.0
         seconds = (max(stats["timestamps"]) - min(stats["timestamps"])).total_seconds()
-        print(f"{topic_id:<10}{found:>17}{recall:>10.3f}"
-              f"{stats['total_tokens']:>15}{seconds:>17.1f}")
+        progression = "→".join(str(n) for n in cumulative)
+        print(f"{topic_id:<10}{len(seen):>17}{recall:>10.3f}"
+              f"{stats['total_tokens']:>15}{seconds:>17.1f}  {progression}")
+
+    # Aggregate progression across topics: where do improvements stop?
+    max_iterations = max((len(s["iterations"]) for s in topics.values()), default=0)
+    if max_iterations > 1:
+        print(f"\n{'Iteration':<10}{'Topics':>7}{'New rel docs':>14}"
+              f"{'Cum rel docs':>14}{'Cum recall':>12}{'Tokens':>12}")
+        for index in range(max_iterations):
+            reached = [t for t, s in topics.items() if len(s["iterations"]) > index]
+            new_docs = cum_docs = cum_recall = tokens = 0
+            for topic_id in reached:
+                iterations = topics[topic_id]["iterations"]
+                before = set().union(*(i["relevant_docids"] for i in iterations[:index])) if index else set()
+                after = before | iterations[index]["relevant_docids"]
+                new_docs += len(after) - len(before)
+                cum_docs += len(after)
+                available = total_relevant.get(topic_id, 0)
+                cum_recall += len(after) / available if available else 0.0
+                tokens += iterations[index]["tokens"]
+            n = len(reached)
+            print(f"{index + 1:<10}{n:>7}{new_docs / n:>14.2f}"
+                  f"{cum_docs / n:>14.2f}{cum_recall / n:>12.3f}{tokens / n:>12.0f}")
 
 
 if __name__ == "__main__":
