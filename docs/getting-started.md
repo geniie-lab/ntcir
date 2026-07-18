@@ -21,8 +21,12 @@
     |Japanese|Train/Dev|[NTCIR-1 (IR and Term Extraction/Role Analysis Test Collections)](https://github.com/geniie-lab/geniie-backend/tree/dev/dataset/ntcir1-adhoc)<br/>:bulb: You need to download `ntcir1-adhoc.yaml` and `ntcir1_adhoc.py` to the same folder as the notebook.|
     |Japanese|Test|[NTCIR-2 (IR Test Collection)](https://github.com/geniie-lab/geniie-backend/tree/dev/dataset/ntcir2-adhoc)<br/>:bulb: You need to download `ntcir2-adhoc.yaml` and `ntcir2_adhoc.py` to the same folder as the notebook.|
 
-1. Obtain a free API key from [groq](https://groq.com/)
-    - Participants are expected to purchase additional API credits to complete experiments.
+1. ~~Obtain a free API key from [groq](https://groq.com/)~~ ~~Participants are expected to purchase additional API credits to complete experiments.~~
+    - Set up [Amazon Bedrock](https://aws.amazon.com/bedrock/) access instead:
+        - Create an AWS account
+        - Enable model access for `gpt-oss-120b` in the Amazon Bedrock console of your region (e.g. `us-east-1`)
+        - Generate an Amazon Bedrock API key
+    - :bulb: See the [FAQ](faq.md) for a cost estimate.
 
 1. Clone the `dev` branch of [geniie-lab](https://github.com/geniie-lab/geniie-lab/tree/dev) repo
     - Run the following commands to install
@@ -40,7 +44,8 @@
         OPENSEARCH_HOST="[Contact the organiser to obtain the URL]"
         OPENSEARCH_ADMIN_USER="[Contact the organiser to obtain your username]"
         OPENSEARCH_ADMIN_PASS="[Contact the organiser to obtain your password]"
-        GROQ_API_KEY="[your groq api key]"
+        BEDROCK_API_KEY="[your Amazon Bedrock API key]"
+        BEDROCK_REGION="[your region, e.g. us-east-1]"
         ```
     - Download [run_session_experiment_ntcir19.py](run_session_experiment_ntcir19.py) and save it to the `scripts` folder of `geniie-lab` repo and
         - Run the script to conduct a pilot experiment
