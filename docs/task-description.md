@@ -10,7 +10,7 @@
 
 !!! tip "Goal of AgenticInstruction Task at NTCIR-19"
 
-    - Goal of AgenticInstruction Task at NTCIR-19 is to develop instruction methods for an LLM to ==maximise a total number of unique relevant documents identified== within five iterations of search sequences, ==while minimising a total number of tokens== sent to and produced by the LLM.
+    - Goal of AgenticInstruction Task at NTCIR-19 is to develop instruction methods for an LLM to ==maximise a total number of unique relevant documents identified (recall)== within five iterations of search sequences, ==while minimising a total number of tokens== sent to and produced by the LLM.
     - A search sequence includes a query, ranking, click, and relevance judgement
     - A relevant document in this task is
         - a document clicked (selected) from a SERP by the LLM; and
@@ -343,7 +343,13 @@
 
 ## How to measure the performance
 
-:construction: To be added soon!
+When an experiment finishes successfully, you will see the performance statistics like below.
+
+```
+Topic       Unique rel docs    Recall   Total tokens   Total time (s)
+302                       7     0.108         128901            183.9
+303                       2     0.200          94255            165.1
+```
 
 !!! question "Need help?"
 
