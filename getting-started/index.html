@@ -449,9 +449,15 @@
 </table>
 </li>
 <li>
-<p>Obtain a free <abbr title="Application Programming Interface">API</abbr> key from <a href="https://groq.com/">groq</a></p>
+<p><del>Obtain a free <abbr title="Application Programming Interface">API</abbr> key from <a href="https://groq.com/">groq</a></del> <del>Participants are expected to purchase additional <abbr title="Application Programming Interface">API</abbr> credits to complete experiments.</del></p>
 <ul>
-<li>Participants are expected to purchase additional <abbr title="Application Programming Interface">API</abbr> credits to complete experiments.</li>
+<li>Set up <a href="https://aws.amazon.com/bedrock/">Amazon Bedrock</a> access instead:<ul>
+<li>Create an AWS account</li>
+<li>Enable model access for <code>gpt-oss-120b</code> in the Amazon Bedrock console of your region (e.g. <code>us-east-1</code>)</li>
+<li>Generate an Amazon Bedrock <abbr title="Application Programming Interface">API</abbr> key</li>
+</ul>
+</li>
+<li><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> See the <a href="../faq/">FAQ</a> for a cost estimate.</li>
 </ul>
 </li>
 <li>
@@ -470,7 +476,8 @@ python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </s
     <div class="highlight"><pre><span></span><code><span class="nv">OPENSEARCH_HOST</span><span class="o">=</span><span class="s2">&quot;[Contact the organiser to obtain the URL]&quot;</span>
 <span class="nv">OPENSEARCH_ADMIN_USER</span><span class="o">=</span><span class="s2">&quot;[Contact the organiser to obtain your username]&quot;</span>
 <span class="nv">OPENSEARCH_ADMIN_PASS</span><span class="o">=</span><span class="s2">&quot;[Contact the organiser to obtain your password]&quot;</span>
-<span class="nv">GROQ_API_KEY</span><span class="o">=</span><span class="s2">&quot;[your groq api key]&quot;</span>
+<span class="nv">BEDROCK_API_KEY</span><span class="o">=</span><span class="s2">&quot;[your Amazon Bedrock API key]&quot;</span>
+<span class="nv">BEDROCK_REGION</span><span class="o">=</span><span class="s2">&quot;[your region, e.g. us-east-1]&quot;</span>
 </code></pre></div></li>
 <li>Download <a href="../run_session_experiment_ntcir19.py">run_session_experiment_ntcir19.py</a> and save it to the <code>scripts</code> folder of <code>geniie-lab</code> repo and<ul>
 <li>Run the script to conduct a pilot experiment<ul>

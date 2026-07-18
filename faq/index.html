@@ -414,6 +414,15 @@
 <summary>How can I see the exact transaction between the <abbr title="Large Language Model">LLM</abbr> and <code>geniie-lab</code>?</summary>
 <p>Set <code>full_log=True</code></p>
 </details>
+<details class="question">
+<summary>How much will Amazon Bedrock usage cost?</summary>
+<ul>
+<li><code>gpt-oss-120b</code> on Amazon Bedrock is priced at $0.15 per million input tokens and $0.60 per million output tokens (check the current prices at <a href="https://aws.amazon.com/bedrock/pricing/">Amazon Bedrock pricing</a>).</li>
+<li>The pilot experiment in <a href="../getting-started/">Getting Started</a> costs well under $0.01.</li>
+<li>A full session of five iterations uses roughly 0.4-0.6M tokens per topic, so one 50-topic experiment is approximately 25M tokens, or <strong>about $5</strong>.</li>
+<li>One run (<abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr> + Sparse Encoder) is roughly $10-15; a full participation of three runs in both languages, including development overhead, is on the order of $60-90.</li>
+</ul>
+</details>
 <div class="admonition question">
 <p class="admonition-title">Not finding answers?</p>
 <p>Contact us via <a href="http://discord.gg/zvXkNKtEGa">Discord server</a> or email <code>agenticinstruction-org at googlegroups dot com</code>.</p>

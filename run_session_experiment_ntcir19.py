@@ -74,8 +74,8 @@ my_settings = ExperimentSettings(
     # ),
     models=[
         ModelDescription(
-            type="groq",
-            name="openai/gpt-oss-120b",
+            type="bedrock",
+            name="openai.gpt-oss-120b",
             token_length=128000,  # set to your model's max input token length
             system_prompt="You're a helpful assistant",
             temperature=0.0,
