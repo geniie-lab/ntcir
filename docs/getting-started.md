@@ -27,6 +27,7 @@
         - Enable model access for `gpt-oss-120b` in the Amazon Bedrock console of your region (e.g. `us-east-1`)
         - Generate an Amazon Bedrock API key
     - :bulb: See the [FAQ](faq.md) for a cost estimate.
+    - :bulb: You can use a locally deployed model via ollama or vllm.
 
 1. Clone the `dev` branch of [geniie-lab](https://github.com/geniie-lab/geniie-lab/tree/dev) repo
     - Run the following commands to install
