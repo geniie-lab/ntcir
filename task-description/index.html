@@ -535,7 +535,7 @@
 <div class="admonition tip">
 <p class="admonition-title">Goal of AgenticInstruction Task at <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19</p>
 <ul>
-<li>Goal of AgenticInstruction Task at <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19 is to develop instruction methods for an <abbr title="Large Language Model">LLM</abbr> to <mark>maximise a total number of unique relevant documents identified</mark> within five iterations of search sequences, <mark>while minimising a total number of tokens</mark> sent to and produced by the <abbr title="Large Language Model">LLM</abbr>.</li>
+<li>Goal of AgenticInstruction Task at <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19 is to develop instruction methods for an <abbr title="Large Language Model">LLM</abbr> to <mark>maximise a total number of unique relevant documents identified (recall)</mark> within five iterations of search sequences, <mark>while minimising a total number of tokens</mark> sent to and produced by the <abbr title="Large Language Model">LLM</abbr>.</li>
 <li>A search sequence includes a query, ranking, click, and relevance judgement</li>
 <li>A relevant document in this task is<ul>
 <li>a document clicked (selected) from a SERP by the <abbr title="Large Language Model">LLM</abbr>; and</li>
@@ -902,7 +902,11 @@ You will need to use the index name in multiple places in the experimental setti
 </div>
 </div>
 <h2 id="how-to-measure-the-performance">How to measure the performance</h2>
-<p><img alt="🚧" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f6a7.svg" title=":construction:" /> To be added soon!</p>
+<p>When an experiment finishes successfully, you will see the performance statistics like below.</p>
+<div class="highlight"><pre><span></span><code>Topic       Unique rel docs    Recall   Total tokens   Total time (s)
+302                       7     0.108         128901            183.9
+303                       2     0.200          94255            165.1
+</code></pre></div>
 <div class="admonition question">
 <p class="admonition-title">Need help?</p>
 <p>Contact us via <a href="http://discord.gg/zvXkNKtEGa">Discord server</a> or email <code>agenticinstruction-org at googlegroups dot com</code>.</p>
