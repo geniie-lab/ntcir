@@ -44,7 +44,7 @@
         ```
     - Download [run_session_experiment_ntcir19.py](run_session_experiment_ntcir19.py) and save it to the `scripts` folder of `geniie-lab` repo and
         - Run the script to conduct a pilot experiment
-            - Query, ranking, click, and judge for a single topic
+            - Initial query formulation based on topic information, followed by ranking by BM25
             ```bash
             python scripts/run_session_experiment_ntcir19.py
             ```

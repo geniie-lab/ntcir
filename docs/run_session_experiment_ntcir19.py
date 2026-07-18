@@ -1,5 +1,8 @@
 # Third-party libraries
+import json
 import os
+import traceback
+import ir_datasets
 import ir_measures
 from datetime import datetime
 from dotenv import load_dotenv
@@ -83,7 +86,7 @@ my_settings = ExperimentSettings(
         ToolDescription(
             name="opensearch",
             ranking_model="bm25",
-            index_name="[index_name]",
+            index_name="trec_robust_2004_bm25", # Set your choice of index name
             host=os.getenv("OPENSEARCH_HOST"),
             port=9200,
             description="It allows you to perform searches using keywords only and employs the BM25 ranking model to order results.",
@@ -125,9 +128,9 @@ my_settings = ExperimentSettings(
     },
 
     # plan=["query"],
-    # plan=["query", "ranking"],
+    plan=["query", "ranking"],
     # plan=["query", "ranking", "click"],
-    plan=["query", "ranking", "click", "relevance"],
+    # plan=["query", "ranking", "click", "relevance"],
     # plan=["query", "ranking", "click", "relevance"] + ["reformulate", "ranking", "click", "relevance"],
     # plan=["query", "ranking", "click", "relevance"] + ["reformulate", "ranking", "click", "relevance"] * 2,
     # plan=["query", "ranking", "click", "relevance"] + ["reformulate", "ranking", "click", "relevance"] * 3,
@@ -137,11 +140,60 @@ my_settings = ExperimentSettings(
     full_log=False
 )
 
+def report_topic_statistics(jsonl_path):
+    """Print per-topic statistics from a session log file:
+    - unique relevant documents: clicked by the LLM, judged relevant by the
+      LLM, and labeled relevant in the official qrels (see Task Description)
+    - total tokens sent to and produced by the LLM across all stages
+    - recall: unique relevant documents found / all relevant documents in the
+      official qrels for the topic
+    - total time in seconds, from the first to the last record of the topic
+      (the first stage's LLM call happens before the first record is written,
+      so its latency is not included)
+    """
+    topics = {}
+    dataset_names = set()
+    with open(jsonl_path, encoding="utf-8") as f:
+        for line in f:
+            record = json.loads(line)
+            dataset_names.add(record["dataset"])
+            stats = topics.setdefault(
+                record["topic_id"],
+                {"relevant_docids": set(), "total_tokens": 0, "timestamps": []}
+            )
+            stats["total_tokens"] += record.get("total_token") or 0
+            stats["timestamps"].append(datetime.fromisoformat(record["created_at"]))
+            if (record.get("stage") == "rel_judge"
+                    and record.get("label") == "Relevance.RELEVANT"
+                    and record.get("qrel_label", 0) >= 1):
+                stats["relevant_docids"].add(record["docid"])
+
+    # Total relevant documents per topic from the official qrels
+    total_relevant = {}
+    for name in dataset_names:
+        dataset = ir_datasets.load(name)
+        if callable(dataset):
+            dataset = dataset()
+        for row in dataset.qrels_iter():
+            if row.query_id in topics and row.relevance >= 1:
+                total_relevant[row.query_id] = total_relevant.get(row.query_id, 0) + 1
+
+    print(f"\n{'Topic':<10}{'Unique rel docs':>17}{'Recall':>10}"
+          f"{'Total tokens':>15}{'Total time (s)':>17}")
+    for topic_id, stats in topics.items():
+        found = len(stats["relevant_docids"])
+        available = total_relevant.get(topic_id, 0)
+        recall = found / available if available else 0.0
+        seconds = (max(stats["timestamps"]) - min(stats["timestamps"])).total_seconds()
+        print(f"{topic_id:<10}{found:>17}{recall:>10.3f}"
+              f"{stats['total_tokens']:>15}{seconds:>17.1f}")
+
+
 if __name__ == "__main__":
 
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
-    base_dir = "../logs"
+    base_dir = "./logs"
     stdout_path = f"{base_dir}/{my_settings.name}_{timestamp}.jsonl"
     stderr_path = f"{base_dir}/{my_settings.name}_{timestamp}.log"
 
@@ -149,4 +201,10 @@ if __name__ == "__main__":
     with open(stdout_path, "w", encoding="utf-8") as fout, \
         open(stderr_path, "w", encoding="utf-8") as ferr:
         with redirect_stdout(fout), redirect_stderr(ferr):
-            runner.run()
+            try:
+                runner.run()
+            except Exception:
+                traceback.print_exc()   # lands in the .log via the redirect
+                raise                   # still fail loudly on the console with exit code
+
+    report_topic_statistics(stdout_path)
