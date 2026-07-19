@@ -349,6 +349,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="How to measure the performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organiser-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organiser baseline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -502,6 +517,21 @@
       How to measure the performance
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="How to measure the performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#organiser-baseline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Organiser baseline
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -920,6 +950,57 @@ Iteration  Topics  New rel docs  Cum rel docs  Cum recall      Tokens
 4               5          0.00          5.20       0.209      208060
 5               5          0.00          5.20       0.209      263517
 </code></pre></div>
+<h3 id="organiser-baseline">Organiser baseline</h3>
+<p>For reference, we provide baseline performance for all six official configurations, produced with the <strong>default instructions</strong> in <a href="../run_session_experiment_ntcir19.py">run_session_experiment_ntcir19.py</a> (<code>gpt-oss-120b</code> via Amazon Bedrock, five iterations). Use these as a starting point to beat.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Language</th>
+<th style="text-align: left;">Dataset</th>
+<th style="text-align: left;"><abbr title="Information Retrieval">IR</abbr> Model</th>
+<th style="text-align: left;">Baseline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004 (fold1)</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+<td style="text-align: left;"><a href="../baselines/baseline-en-robust2004-fold1-bm25.txt">results</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004 (fold1)</td>
+<td style="text-align: left;">Sparse Encoder</td>
+<td style="text-align: left;"><a href="../baselines/baseline-en-robust2004-fold1-splade.txt">results</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004 (fold2)</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+<td style="text-align: left;"><a href="../baselines/baseline-en-robust2004-fold2-bm25.txt">results</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">English</td>
+<td style="text-align: left;"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004 (fold2)</td>
+<td style="text-align: left;">Sparse Encoder</td>
+<td style="text-align: left;"><a href="../baselines/baseline-en-robust2004-fold2-splade.txt">results</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Japanese</td>
+<td style="text-align: left;"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-1 AdHoc</td>
+<td style="text-align: left;"><abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr></td>
+<td style="text-align: left;"><a href="../baselines/baseline-ja-ntcir1-bm25.txt">results</a></td>
+</tr>
+<tr>
+<td style="text-align: left;">Japanese</td>
+<td style="text-align: left;"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-1 AdHoc</td>
+<td style="text-align: left;">Sparse Encoder</td>
+<td style="text-align: left;"><a href="../baselines/baseline-ja-ntcir1-splade.txt">results</a></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> These baselines use default instructions with no optimisation — the goal of the task is to design instructions that identify more unique relevant documents (higher recall) using fewer tokens.</p>
 <div class="admonition question">
 <p class="admonition-title">Need help?</p>
 <p>Contact us via <a href="http://discord.gg/zvXkNKtEGa">Discord server</a> or email <code>agenticinstruction-org at googlegroups dot com</code>.</p>
