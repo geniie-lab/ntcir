@@ -253,9 +253,11 @@
 
 === "NTCIR-1 AdHoc"
 
+    :bulb: Download `ntcir1_adhoc.py` and `ntcir1-adhoc.yaml` from [geniie-backend](https://github.com/geniie-lab/geniie-backend/tree/dev/dataset/ntcir1-adhoc) to the `scripts` folder of `geniie-lab`. The experiment script imports the loader automatically for `ntcir*` dataset names.
+
     ```python
     topicset=TopicDescription(
-        name="ntcir1_adhoc",
+        name="ntcir1-adhoc",
         type="ir_datasets",
         ...
     )
@@ -270,9 +272,11 @@
 
 === "NTCIR-2 AdHoc"
 
+    :bulb: Download `ntcir2_adhoc.py` and `ntcir2-adhoc.yaml` from [geniie-backend](https://github.com/geniie-lab/geniie-backend/tree/dev/dataset/ntcir2-adhoc) to the `scripts` folder of `geniie-lab`. The experiment script imports the loader automatically for `ntcir*` dataset names.
+
     ```python
     topicset=TopicDescription(
-        name="ntcir2_adhoc",
+        name="ntcir2-adhoc",
         type="ir_datasets",
         ...
     )

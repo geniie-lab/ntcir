@@ -1,6 +1,8 @@
 # Third-party libraries
+import importlib
 import json
 import os
+import sys
 import traceback
 import ir_datasets
 import ir_measures
@@ -43,8 +45,8 @@ my_settings = ExperimentSettings(
         name="disks45/nocr/trec-robust-2004/fold1",
         # name="disks45/nocr/trec-robust-2004/fold2",
         # name="aquaint/trec-robust-2005",
-        # name="ntcir1_adhoc",
-        # name="ntcir2_adhoc",
+        # name="ntcir1-adhoc",
+        # name="ntcir2-adhoc",
         type="ir_datasets",
         topic_class=FullTopic
     ),
@@ -139,6 +141,14 @@ my_settings = ExperimentSettings(
     topic_ids="1:1",
     full_log=False
 )
+
+# The NTCIR datasets are custom ir_datasets loaders: importing the module
+# registers the dataset name. Download the loader files (e.g. ntcir1_adhoc.py
+# and ntcir1-adhoc.yaml) from geniie-backend into this scripts folder first;
+# see the dataset table in Getting Started.
+if my_settings.topicset.name.startswith("ntcir"):
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    importlib.import_module(my_settings.topicset.name.replace("-", "_"))
 
 def report_topic_statistics(jsonl_path):
     """Print per-topic statistics from a session log file:
