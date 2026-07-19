@@ -42,8 +42,8 @@
 
     - `gpt-oss-120b` on Amazon Bedrock is priced at $0.15 per million input tokens and $0.60 per million output tokens (check the current prices at [Amazon Bedrock pricing](https://aws.amazon.com/bedrock/pricing/)).
     - The pilot experiment in [Getting Started](getting-started.md) costs well under $0.01.
-    - A full session of five iterations uses roughly 0.4-0.6M tokens per topic, so one 50-topic experiment is approximately 25M tokens, or **about $5**.
-    - One run (BM25 + Sparse Encoder) is roughly $10-15; a full participation of three runs in both languages, including development overhead, is on the order of $60-90.
+    - Measured on our baseline runs with default instructions (TREC Robust 2004 fold1, 50 topics, five iterations): a full session uses roughly 0.7-0.9M tokens per topic, so one 50-topic experiment is 34-44M tokens, or **about $7-9**.
+    - One run (BM25 + Sparse Encoder session files) is therefore roughly **$15-20**.
 
 !!! question "Not finding answers?"
 
