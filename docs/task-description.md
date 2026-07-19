@@ -366,6 +366,21 @@ Iteration  Topics  New rel docs  Cum rel docs  Cum recall      Tokens
 5               5          0.00          5.20       0.209      263517
 ```
 
+### Organiser baseline
+
+For reference, we provide baseline performance for all six official configurations, produced with the **default instructions** in [run_session_experiment_ntcir19.py](run_session_experiment_ntcir19.py) (`gpt-oss-120b` via Amazon Bedrock, five iterations). Use these as a starting point to beat.
+
+|Language|Dataset|IR Model|Baseline|
+|:--|:--|:--|:--|
+|English|TREC Robust 2004 (fold1)|BM25|[results](baselines/baseline-en-robust2004-fold1-bm25.txt)|
+|English|TREC Robust 2004 (fold1)|Sparse Encoder|[results](baselines/baseline-en-robust2004-fold1-splade.txt)|
+|English|TREC Robust 2004 (fold2)|BM25|[results](baselines/baseline-en-robust2004-fold2-bm25.txt)|
+|English|TREC Robust 2004 (fold2)|Sparse Encoder|[results](baselines/baseline-en-robust2004-fold2-splade.txt)|
+|Japanese|NTCIR-1 AdHoc|BM25|[results](baselines/baseline-ja-ntcir1-bm25.txt)|
+|Japanese|NTCIR-1 AdHoc|Sparse Encoder|[results](baselines/baseline-ja-ntcir1-splade.txt)|
+
+:bulb: These baselines use default instructions with no optimisation — the goal of the task is to design instructions that identify more unique relevant documents (higher recall) using fewer tokens.
+
 !!! question "Need help?"
 
     Contact us via [Discord server](http://discord.gg/zvXkNKtEGa) or email `agenticinstruction-org at googlegroups dot com`.
