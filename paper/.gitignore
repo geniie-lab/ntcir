@@ -1,0 +1,10 @@
+# LaTeX build intermediates (latexmk); the compiled PDF is committed deliberately
+*.aux
+*.log
+*.out
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.cut
