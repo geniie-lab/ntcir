@@ -210,12 +210,12 @@ For submitted runs, the following components were fixed:
 
 \begin{itemize}
   \item \textbf{LLM}: \texttt{gpt-oss-120b} (open-weight, 117B-parameter
-  mixture-of-experts model) accessed via Amazon Bedrock, with
-  \texttt{temperature}~$= 0.0$ and \texttt{top\_p}~$= 1.0$;
+  mixture-of-experts model) accessed via Amazon Bedrock, with greedy
+  decoding settings (temperature 0.0, top-$p$ 1.0);
   \item \textbf{Search tools}: OpenSearch with (a) BM25 ranking (with
   language-appropriate analysis, e.g.\ Kuromoji for Japanese) and (b) a
-  multilingual learned sparse encoder
-  (\texttt{opensearch-neural-sparse-encoding-multilingual-v1}) over
+  multilingual learned sparse encoder\footnote{%
+  \path{opensearch-neural-sparse-encoding-multilingual-v1}} over
   passage-chunked documents, hosted by the organisers;
   \item \textbf{SERP size}: ten results per query;
   \item \textbf{Session plan}: five iterations of the four-stage sequence.
@@ -265,7 +265,7 @@ the train/dev datasets. For the Japanese qrels, both grades ``relevant'' and
 \begin{table}
 \caption{Datasets of the AgenticInstruction task.}
 \label{tab:datasets}
-\begin{tabular}{lllr}
+\begin{tabular}{@{}lllr@{}}
 \toprule
 Language & Role & Dataset & Topics \\
 \midrule
@@ -300,7 +300,7 @@ website.\footnote{\url{https://geniie-lab.github.io/ntcir/}}
 \caption{Organiser baselines (default instructions, five iterations,
 \texttt{gpt-oss-120b} via Amazon Bedrock).}
 \label{tab:baselines}
-\begin{tabular}{llrrr}
+\begin{tabular}{@{}llrrr@{}}
 \toprule
 Dataset & IR model & \makecell[r]{Mean uniq.\\rel.\ docs} & \makecell[r]{Mean\\recall} & \makecell[r]{Total\\tokens} \\
 \midrule
