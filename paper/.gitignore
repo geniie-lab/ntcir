@@ -8,3 +8,8 @@
 *.fdb_latexmk
 *.synctex.gz
 *.cut
+
+# Reference materials kept locally, not distributed in the repo
+ntcir11-temporalia-overview.pdf
+NTCIR_18_template.pdf
+kickoff-agenticinstruction-slides.pdf
