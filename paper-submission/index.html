@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../run-submission/">
       
       
-        <link rel="next" href="../task-description/">
+        <link rel="next" href="../faq/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Getting Started - NTCIR AgenticInstruction Task</title>
+        <title>How to Submit Papers - NTCIR AgenticInstruction Task</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-get-started-with-agentic-instruction-task" class="md-skip">
+        <a href="#how-to-submit-papers" class="md-skip">
           Skip to content
         </a>
       
@@ -107,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Getting Started
+              How to Submit Papers
             
           </span>
         </div>
@@ -223,19 +223,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -246,7 +237,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -299,10 +289,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../paper-submission/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -313,6 +312,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -395,134 +395,16 @@
 
 
 
-<h1 id="how-to-get-started-with-agentic-instruction-task">How to get started with Agentic Instruction Task</h1>
-<ol>
-<li><a href="https://research.nii.ac.jp/ntcir/ntcir-19/howto.html">Register to <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19</a> and select <code>AgenticInstruction</code> as a participating task</li>
-<li>Decide which language(s) to participate (English only, Japanese only, or both)</li>
-<li>
-<p>Obtain a copy of datasets based on your language choice.</p>
+<h1 id="how-to-submit-papers">How to submit papers</h1>
+<div class="admonition memo">
+<p class="admonition-title">Memo</p>
 <ul>
-<li>We suggest starting with train/dev datasets first.</li>
+<li>See <a href="https://research.nii.ac.jp/ntcir/ntcir-19/papers.html">Paper Submission Instruction</a> at <abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-19 website</li>
+<li>Our task's deadline for draft paper is <strong>October 1st</strong> (Not September 1st).</li>
+<li>Camere-ready deadline is <strong>November 1st</strong> (This is a hard deadline).</li>
+<li>Task overview paper will be shared with active participants who submitted runs.</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Language</th>
-<th style="text-align: left;">Set</th>
-<th style="text-align: left;">Dataset</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">English</td>
-<td style="text-align: left;">Train/Dev</td>
-<td style="text-align: left;"><a href="https://ir-datasets.com/disks45.html"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004 with disk45/nocr</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">English</td>
-<td style="text-align: left;">Test</td>
-<td style="text-align: left;"><a href="https://ir-datasets.com/aquaint.html"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2005 with Aquaint</a><br/><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Not free. Obtain the test set only when you decide to submit a run.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Japanese</td>
-<td style="text-align: left;">Train/Dev</td>
-<td style="text-align: left;"><a href="https://research.nii.ac.jp/ntcir/permission/perm-en.html#ntcir-1"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-1 (<abbr title="Information Retrieval">IR</abbr> and Term Extraction/Role Analysis Test Collections)</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Japanese</td>
-<td style="text-align: left;">Test</td>
-<td style="text-align: left;"><a href="https://research.nii.ac.jp/ntcir/permission/perm-en.html#ntcir-2"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-2 (<abbr title="Information Retrieval">IR</abbr> Test Collection)</a><br/><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Obtain the test set only when you decide to submit a run.</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p>Run preprocessing notebooks to gain access to the datasets using <code>ir_datasets</code></p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Language</th>
-<th style="text-align: left;">Set</th>
-<th style="text-align: left;">Notebook/Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">English</td>
-<td style="text-align: left;">Train/Dev</td>
-<td style="text-align: left;"><a href="https://github.com/geniie-lab/geniie-backend/blob/dev/dataset/trec-robust-2004/"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2004 with disk45/nocr</a><br/><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Use <code>disks45/nocr/trec-robust-2004/fold1</code> and <code>disks45/nocr/trec-robust-2004/fold2</code> as training.</td>
-</tr>
-<tr>
-<td style="text-align: left;">English</td>
-<td style="text-align: left;">Test</td>
-<td style="text-align: left;"><a href="https://github.com/geniie-lab/geniie-backend/blob/dev/dataset/trec-robust-2005/"><abbr title="Text REtrieval Conference">TREC</abbr> Robust 2005 with Aquaint</a></td>
-</tr>
-<tr>
-<td style="text-align: left;">Japanese</td>
-<td style="text-align: left;">Train/Dev</td>
-<td style="text-align: left;"><a href="https://github.com/geniie-lab/geniie-backend/tree/dev/dataset/ntcir1-adhoc"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-1 (<abbr title="Information Retrieval">IR</abbr> and Term Extraction/Role Analysis Test Collections)</a><br/><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> You need to download <code>ntcir1-adhoc.yaml</code> and <code>ntcir1_adhoc.py</code> to the same folder as the notebook.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Japanese</td>
-<td style="text-align: left;">Test</td>
-<td style="text-align: left;"><a href="https://github.com/geniie-lab/geniie-backend/tree/dev/dataset/ntcir2-adhoc"><abbr title="NII Testbeds and Community for Information access Research">NTCIR</abbr>-2 (<abbr title="Information Retrieval">IR</abbr> Test Collection)</a><br/><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> You need to download <code>ntcir2-adhoc.yaml</code> and <code>ntcir2_adhoc.py</code> to the same folder as the notebook.</td>
-</tr>
-</tbody>
-</table>
-</li>
-<li>
-<p><del>Obtain a free <abbr title="Application Programming Interface">API</abbr> key from <a href="https://groq.com/">groq</a></del> <del>Participants are expected to purchase additional <abbr title="Application Programming Interface">API</abbr> credits to complete experiments.</del></p>
-<ul>
-<li>Set up <a href="https://aws.amazon.com/bedrock/">Amazon Bedrock</a> access instead:<ul>
-<li>Create an AWS account</li>
-<li>Enable model access for <code>gpt-oss-120b</code> in the Amazon Bedrock console of your region (e.g. <code>us-east-1</code>)</li>
-<li>Generate an Amazon Bedrock <abbr title="Application Programming Interface">API</abbr> key</li>
-</ul>
-</li>
-<li><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> See the <a href="../faq/">FAQ</a> for a cost estimate.</li>
-<li><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> You can use a locally deployed model via ollama or vllm.</li>
-</ul>
-</li>
-<li>
-<p>Clone the <code>dev</code> branch of <a href="https://github.com/geniie-lab/geniie-lab/tree/dev">geniie-lab</a> repo</p>
-<ul>
-<li>Run the following commands to install
-    <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/geniie-lab/geniie-lab.git<span class="w"> </span>-b<span class="w"> </span>dev
-python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
-<span class="nb">source</span><span class="w"> </span>venv/bin/activate
-<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-U<span class="w"> </span>pip
-<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-<span class="o">(</span>venv<span class="o">)</span><span class="w"> </span>python<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
-</code></pre></div></li>
-<li>Set the environmental variables in <code>.env</code> file at the root of the repo folder</li>
-<li><img alt="💡" class="twemoji" src="https://cdn.jsdelivr.net/gh/jdecked/twemoji@16.0.1/assets/svg/1f4a1.svg" title=":bulb:" /> Note that each registered group has its own username/password
-    <div class="highlight"><pre><span></span><code><span class="nv">OPENSEARCH_HOST</span><span class="o">=</span><span class="s2">&quot;[Contact the organiser to obtain the URL]&quot;</span>
-<span class="nv">OPENSEARCH_ADMIN_USER</span><span class="o">=</span><span class="s2">&quot;[Contact the organiser to obtain your username]&quot;</span>
-<span class="nv">OPENSEARCH_ADMIN_PASS</span><span class="o">=</span><span class="s2">&quot;[Contact the organiser to obtain your password]&quot;</span>
-<span class="nv">BEDROCK_API_KEY</span><span class="o">=</span><span class="s2">&quot;[your Amazon Bedrock API key]&quot;</span>
-<span class="nv">BEDROCK_REGION</span><span class="o">=</span><span class="s2">&quot;[your region, e.g. us-east-1]&quot;</span>
-</code></pre></div></li>
-<li>Download <a href="../run_session_experiment_ntcir19.py">run_session_experiment_ntcir19.py</a> and save it to the <code>scripts</code> folder of <code>geniie-lab</code> repo and<ul>
-<li>Run the script to conduct a pilot experiment<ul>
-<li>Initial query formulation based on topic information, followed by ranking by <abbr title="Best Matching 25, a classic lexical ranking function">BM25</abbr>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>scripts/run_session_experiment_ntcir19.py
-</code></pre></div></li>
-</ul>
-</li>
-<li>Check <code>logs</code> folder for outputs.<ul>
-<li><code>.jsonl</code> is the search log file of experiments</li>
-<li><code>.log</code> is the error/warning log file for reference</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Read the <a href="https://github.com/geniie-lab/geniie-lab/blob/dev/docs/index.md">documentation</a> of <code>geniie-lab</code> as needed</li>
-</ul>
-</li>
-<li>
-<p>You're ready to go! Move on to <a href="../task-description/">Task Description</a></p>
-</li>
-</ol>
+</div>
 <div class="admonition question">
 <p class="admonition-title">Questions?</p>
 <p>Contact us via <a href="http://discord.gg/zvXkNKtEGa">Discord server</a> or email <code>agenticinstruction-org at googlegroups dot com</code>.</p>
