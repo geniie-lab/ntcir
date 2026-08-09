@@ -22,7 +22,7 @@
     1. [Getting started with the registration, datasets, and tool](getting-started.md)
     1. [Learn task description and develop your own instructions](task-description.md)
     1. [Submit runs](run-submission.md)
-    1. Write a participant paper and publish at NTCIR-19 Conference (TBA)
+    1. [Write a participant paper and publish at NTCIR-19 Conference](paper-submission.md)
 
 !!! success "Important Dates"
     :warning: Some dates are different from the NTCIR-19 official schedule.
